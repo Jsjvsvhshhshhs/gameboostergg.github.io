@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .fps-container {
+            padding: 20px;
+        }
+
+        .fps-option {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .fps-option:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+
+    <div class="fps-container">
+        <p>Select FPS:</p>
+        <div class="fps-option" onclick="selectFps(10)">10 FPS</div>
+        <div class="fps-option" onclick="selectFps(20)">20 FPS</div>
+        <div class="fps-option" onclick="selectFps(30)">30 FPS</div>
+        <div class="fps-option" onclick="selectFps(60)">60 FPS</div>
+        <div class="fps-option" onclick="selectFps(120)">120 FPS</div>
+    </div>
+
+    <script>
+        function selectFps(fps) {
+            console.log("Selected FPS: " + fps);
+            // Lakukan sesuatu dengan nilai FPS yang dipilih
+        }
+    </script>
+</body>
+</html>
+
+
+    
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch dan Tombol ON/OFF</title>
+    <style>
+        .switch-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .switch-label {
+            margin-left: 10px;
+        }
+
+        .btn-on,
+        .btn-off {
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-on {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-off {
+            background-color: gray;
+            color: white;
+        }
+
+        #notification {
+            margin-top: 10px;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="switch-container">
+        <label for="switch">auto boost</label>
+        <input type="checkbox" id="switch">
+        <div class="switch-label">
+            <span class="btn-on">ON</span>
+            <span class="btn-off">OFF</span>
+        </div>
+    </div>
+    <button id="apply-button" disabled>Apply</button>
+    <div id="notification"></div>
+
+    <script>
+        const switchInput = document.getElementById('switch');
+        const applyButton = document.getElementById('apply-button');
+        const notification = document.getElementById('notification');
+        const btnOn = document.querySelector('.btn-on');
+        const btnOff = document.querySelector('.btn-off');
+
+        btnOn.addEventListener('click', function() {
+            if (!switchInput.checked) {
+                switchInput.checked = true;
+                btnOn.style.backgroundColor = 'green';
+                btnOff.style.backgroundColor = 'gray';
+                applyButton.removeAttribute('disabled');
+            }
+        });
+
+        btnOff.addEventListener('click', function() {
+            if (switchInput.checked) {
+                switchInput.checked = false;
+                btnOn.style.backgroundColor = 'gray';
+                btnOff.style.backgroundColor = 'gray';
+                applyButton.removeAttribute('disabled');
+            }
+        });
+
+        applyButton.addEventListener('click', function() {
+            if (switchInput.checked) {
+                notification.textContent = 'Apply succeed';
+            } else {
+                notification.textContent = 'Apply it doesnt work, you have to activate it first';
+            }
+            notification.style.display = 'block';
+        });
+
+        switchInput.addEventListener('change', function() {
+            if (switchInput.checked) {
+                btnOff.style.backgroundColor = 'gray';
+                btnOn.style.backgroundColor = 'green';
+            } else {
+                btnOn.style.backgroundColor = 'gray';
+                btnOff.style.backgroundColor = 'red';
+            }
+            applyButton.removeAttribute('disabled');
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('https://i.ibb.co/BrB5fN1/images-5-1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <!-- Konten halaman web -->
+</body>
+</html>
